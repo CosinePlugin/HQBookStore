@@ -1,0 +1,20 @@
+name: HQBookStore
+version: 1.0.0
+api-version: 1.13
+main: kr.hqservice.book.HQBookStore
+authors: [ Cosine_A ]
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.8.0
+softdepend:
+  - MS-Core
+
+commands:
+  책방관리:
+    permission: op
+    aliases:
+      - 도서관관리
+    description: 책방 관리 관련 명령어입니다.
+  책방:
+    aliases:
+      - 도서관
+    description: 책방 관련 명령어입니다.
