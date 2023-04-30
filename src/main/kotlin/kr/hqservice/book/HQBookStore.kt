@@ -1,5 +1,6 @@
 package kr.hqservice.book
 
+import kr.hqservice.book.bstats.Metrics
 import kr.hqservice.book.command.BookStoreAdminCommand
 import kr.hqservice.book.command.BookStoreUserCommand
 import kr.hqservice.book.listener.BookStoreInventoryListener
@@ -24,6 +25,8 @@ class HQBookStore : JavaPlugin() {
     }
 
     override fun onEnable() {
+        Metrics(this, 18264)
+
         val bookStoreFile = CustomConfig(plugin, "books.yml")
         bookStoreRepository = BookStoreRepository(bookStoreFile)
         bookStoreRepository.load()
